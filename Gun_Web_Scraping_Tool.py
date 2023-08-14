@@ -8,7 +8,9 @@ soup = BeautifulSoup(page.content, "html.parser")
 titles=[]
 images=[]
 
-table = soup.find("table")
+table = soup.find_all("table")
+table = table[1] #Change depending on whether there are multiple tables and use below print statement to find correct table, Usually Index 1 if there are multiple tables
+#print(table)
 
 for row in table.find_all("tr"):
 
@@ -36,4 +38,4 @@ while x < len(titles):
 
 formula = formula + ");"
 
-print(formula)
+print(formula) #Manually remove bracket and comma from end of the formula
