@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://en.wikipedia.org/wiki/List_of_pistols"
+url = "https://en.wikipedia.org/wiki/List_of_pistols" #Change Website URL
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 titles=[]
@@ -27,7 +27,7 @@ for row in table.find_all("tr"):
             title = title.replace("'","")
             titles.append(title)
 
-formula = "INSERT INTO Handguns (name,image) VALUES "
+formula = "INSERT INTO AssaultRifles (name,image) VALUES " #Change Table name
 
 x=0
 while x < len(titles):
