@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://en.wikipedia.org/wiki/List_of_pistols" #Change Website URL
+url = "https://en.wikipedia.org/wiki/List_of_assault_rifles" #Change Website URL
 page = requests.get(url)
 soup = BeautifulSoup(page.content, "html.parser")
 titles=[]
